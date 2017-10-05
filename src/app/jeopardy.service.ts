@@ -8,6 +8,9 @@ import 'rxjs/add/operator/map';
 export class JeopardyService {
 
   private baseUrl: string = "http://jservice.io/api/random";
+  // private seinfeld: string = "http://jservice.io/api/categories/12050";
+  // private harrisonFord: string = "http://jservice.io/api/categories/popular/7835";
+  // private looneyTunes: string = "http://jservice.io/api/categories/popular/360";
 
   constructor(private http: Http) { }
 

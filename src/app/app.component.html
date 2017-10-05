@@ -1,29 +1,28 @@
-<div style="text-align:center">
-  <h1>Welcome to {{title}}!!</h1>
-</div>
-<!-- display category, question, and value -->
+
+<div class="jeopardy">
 <div *ngIf="questionInfo">
-  <!-- could remove ? when using ngIf-->
-  Category: {{questionInfo?.category?.title | uppercase}}<br>
-  the question is: {{questionInfo?.question}}<br>
-  the answer is: {{questionInfo?.answer}}<br>
-  the value is: {{questionInfo?.value}}<br>
+  <div class="title">
+  <b class="category"> {{questionInfo.category.title}} </b>
+  <br>
 </div>
-<br><br>
-<div class="answer">
-<input [(ngModel)]="userAnswer" type="text">
-<br>
-<button (click)="checkAnswer()">Submit Answer</button>
+<div class="info">
+  <div class="point">
+        <b class="heading">Points</b>
+        <br>
+        <b class="value">{{questionInfo.value}}</b> 
+      </div>
+  <div class="question">
+      <b class="heading">Question</b>
+      <br>
+    <b class="qtext">{{questionInfo.question}}</b> 
+  </div>
+
 </div>
 
-<div class="scoreTemp">
-  Your Score: {{userScore}}
-  <!-- Your Answer: {{userAnswer}} -->
+  <app-answer (finishedCheckingAnswer)="sampleMethod()" [questionInfo]="questionInfo"></app-answer>
 </div>
-<!-- <input type="text" [(ngModel)]="userInput"><br> -->
-<!-- <app-answer #answerAttributes [newQuestion]="getDataFromService" [questionInfo]="questionInfo"></app-answer> -->
 
 
-
+<!-- <app-answer (completedValidation2)="sampleMethod($event)" [questionInfo]="questionInfo"></app-answer> -->
 
 

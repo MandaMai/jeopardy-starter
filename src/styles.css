@@ -3,8 +3,55 @@
 
 * {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url("http://www.globalstrategygroup.com/wp-content/uploads/2013/08/1280_jeo_alex-738030.jpg");
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    
 }
 
 h1 {
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+.scoreTemp {
+    display: block;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    margin-top: 30px;
+    line-height: 80px;
+
+}
+
+.header {
+    display: block;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    margin-bottom: 30px;
+    line-height: 120px;
+    padding: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.thumbnail img {
+    width: 100px;
+}
+
+.thumbnail h1 {
+    margin-top: -50px;
+    text-align: center;
 }
