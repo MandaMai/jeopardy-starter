@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin|Roboto');
+ 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.category {
+    text-transform: uppercase;
+}
+
+.title {
+color: white;
+font-size: 50px;
+margin-bottom: 10px;
+}
+
+.info {
+    width: 97%;
+    display: flex;
+    flex-wrap: left;
+    margin-top: 20px;
+    margin: 1%;
+}
+.question {
+    width: 80%;
+    padding: 5px;
+    color: rgb(248, 184, 8);
+
+}
+
+.qtext {
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+.point {
+    width: 20%;
+    font-size: 20px;
+color: rgb(248, 184, 8);
+}
+
+.value  {
+    font-size: 40px;
+}
+
+.jeopardy{
+    border: 3px solid rgb(248, 184, 8);
+    background-color: midnightblue;
+    width: 50%;
+    height: 430px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 42%;
+    margin-top: 36%;
+}

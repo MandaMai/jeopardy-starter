@@ -6,17 +6,14 @@ import {JeopardyService } from './jeopardy.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent implements OnInit {
-  title = 'Jeopardy';
+  title = 'app';
 
   questionInfo;
-  userScore: number =0;
-  userAnswer: string;
 
   constructor(private jeopardyService: JeopardyService){}
 
-  // populating questionInfo 
+  //method that uses the jeopardy service from the api
   getDataFromService(){
     this.jeopardyService.getQuestionInfo()
       .subscribe(
@@ -27,21 +24,14 @@ export class AppComponent implements OnInit {
       )
   }
 
-  checkAnswer() {
-    console.log(this.userAnswer)
-    if(this.userAnswer == this.questionInfo.answer) {
-      this.userScore += this.questionInfo.value;
-      this.userAnswer="";
-    }//update user score if answer is correct
-    this.getDataFromService();//get new question
-  }
-
- 
-
-  ngOnInit(){
-    // get question data when page is loaded
+  sampleMethod(){
     this.getDataFromService()
   }
 
+  //call the api on loading of the component to get
+  //initial data
+  ngOnInit(){
+    this.getDataFromService()
+  }
 
 }
